@@ -47,10 +47,8 @@ function App() {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
-    next();
-    if(isLastStep){
-      console.log(data)
-    }
+    if (!isLastStep) return next();
+    console.log(data);
   }
 
   return (
